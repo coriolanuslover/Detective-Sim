@@ -26,22 +26,38 @@ After Wednesday had...   Damn that dog!!!
 """
 
 Red = """Harb came in with some methaqualone, which I didn't think you could get anymore and started handing them out to everyone. 
-Very sweet. Harb took there's and passed out onthe couch. I only took one of the two and was very mellowed out so I just stayed 
+Very sweet. Harb took there's and passed out on the couch. I only took one of the two and was very mellowed out so I just stayed 
 on the couch and watched [REDACTED], my favorite anime ever. A bit into it, Raija came in and asked if Wednesday was around. 
 I think I saw someone let her out but I can't be sure as [REDACTED] was simply too interesting. I saw Raija go outside for a bit 
 and very shortly after she came back in. She started to tell us, extremely panicked, abot what she saw. I still can't believe it.
 """
 ## Missing During Incident, Death Threats Towards Andy, In Truck Smoking During Incident
-Rob = """It's Orson Wells"""
+Rob = """I swear on my dead father Robby Ott former youth pastor and man of God that I did not kill Andrew.
+Sure I said I'd kill him tonight. Sure I said, in writing, that I'd kill him tonight. And in typewriter. And in text message.
+And with a week's notice. But I didn't do it! I was just being sweet! I got my ludes from Harb and went to my truck to smoke! 
+Then all that bullshit inside happened and I wasn't anywhere near it! Ask Blake. He left early and saw me in the truck!"""
 
 ## Witness Blake Wash Dishes, Notice Lani Come Downstairs
-Shilpa = """Witness Blake wash dishes, Notice Lani come downstairs"""
+Shilpa = """I get off from my job where I save lives daily and Andrew has to make the night all about him. Everything was pretty normal
+until it wasn't. Harbin passed out quaaludes, Blake put all the dishes in the washer, Lani hung around for a little while.
+Everything was fine until Andrew wanted to get away from the noise and go out into the shed. He must have took more than his share 
+of quaaludes. I know I saw some on the counter that disappeared. And then I saw some residue in a glass Andrew was drinking out of.
+Not sure why he didn't take them normally like the rest of the group. Anyways, we're all in the living room when Raija comes back in
+and then it all went to shit"""
 
 ## Washes Dishes Thus Empty Sink, Hangs In Living Room, Leaves Early, Witness Rob In Truck
-Blake = """Washes dishes thus empty sink. Hangs in living room. Leaves early. Witness Rob in truck"""
+Blake = """(Blake Cameron could not be reached for questioning however a note left with his testimony
+was left at his residence) Dear Coppers, I did not do it. I wasn't even there to do it, I didn't even know
+it happened until Raija called and told me. But by then I was already at my house packing. I popped in. 
+Popped some ludes. Did the literally all the dishes thank you very much. Then left because I was 
+over stimmied. Rob saw me leave ask them. Off to Bolivia for a bit don't wait up. GN. Disregards, Blake."""
 
 ## Witness Lani Washing Hands And Go Back Upstairs. And Clean Knife In Sink. Witness Raija Make Kong. Goes in Living Room
-Sav = """Witness Lani washing hands and knife in sink. Witness Raija make kong and go outside. Goes in to living room to talk to Red"""
+Sav = """Andy's gone. Loved their vibrations. Everyone was down stairs. Saw Blake do dishes. Lani clean knife and hands.
+Saw Raija make kong then go to find Wednesday who was let outside. """
+
+## Got knife out of sink to prep Kong with, Left Ludes somewhere, Finds Andrew
+Raija = """"""
 
 ## Comes Downstairs To Make Food. Washes Dishes And Outs In Sink. Heads Back Upstairs.
 Lani = """TDB Wait until all testimonies are written"""
@@ -54,6 +70,8 @@ a = input("Enter Details or Testimony to get started: ")
 def options(q):
     if q == "Details":
         print(details)
+    else q == "Testimonies"
+
 
 options(a)
 
