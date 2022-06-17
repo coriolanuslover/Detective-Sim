@@ -3,7 +3,7 @@
 # Final and correct suspect will print good job string
 # If wrong, print bad job string
 # Design Outline - Plot Mystery Narrative, List Suspects, Design Inputs, Have Dialog print, Move back and forth between dialogs
-# TODO- Add plot and dialog, Add Input options for Details Testimony and Solve
+# TODO- Add plot and dialog, Add Input options for Details Testimony and Solve, Finish Testimonies
 
 suspects = ["Red", "Blake", "Harbin", "Rob", "Raija", "Sav", "Lani", "Shilpa"]
 
@@ -32,7 +32,7 @@ I think I saw someone let her out but I can't be sure as [REDACTED] was simply t
 and very shortly after she came back in. She started to tell us, extremely panicked, abot what she saw. I still can't believe it.
 """
 ## Missing During Incident, Death Threats Towards Andy, In Truck Smoking During Incident
-Rob = """"""
+Rob = """It's Orson Wells"""
 
 ## Witness Blake Wash Dishes, Notice Lani Come Downstairs
 Shilpa = """Witness Blake wash dishes, Notice Lani come downstairs"""
@@ -54,7 +54,6 @@ a = input("Enter Details or Testimony to get started: ")
 def options(q):
     if q == "Details":
         print(details)
-    else q == "Testimony":
 
 options(a)
 
