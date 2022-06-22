@@ -5,6 +5,18 @@
 # Design Outline - Plot Mystery Narrative, List Suspects, Design Inputs, Have Dialog print, Move back and forth between dialogs
 # TODO- Add plot and dialog, Add Input options for Details Testimony and Solve, Finish Testimonies
 
+import time, sys
+
+# Put this at the beginning of both files
+def print_out(text):
+    i = 0
+    while i < len(text):
+        print(text[i], end="")
+        # time is in seconds. This is pretty fast, feel free to adjust
+        time.sleep(0.01)
+        i += 1
+        sys.stdout.flush()
+
 suspects = ["Red", "Blake", "Harbin", "Rob", "Raija", "Sav", "Lani", "Shilpa"]
 
 innocentsuspects = ["Red", "Blake", "Harbin", "Rob", "Raija", "Sav", "Shilpa"]

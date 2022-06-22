@@ -1,3 +1,15 @@
+import time, sys
+
+# Put this at the beginning of both files
+def print_out(text):
+    i = 0
+    while i < len(text):
+        print(text[i], end="")
+        # time is in seconds. This is pretty fast, feel free to adjust
+        time.sleep(0.01)
+        i += 1
+        sys.stdout.flush()
+
 harbt = """I had gotten some based quaaludes from my pog cousin and gave to two to everyone.
 Andrew didn't want any at first but eventually put them in their pocket. I had taken mine and fell asleep
 on the couch a little after I gave Andrew his. I don't know if he ever actually took them or not.
