@@ -1,14 +1,4 @@
-import time, sys
-
-# Put this at the beginning of both files
-def print_out(text):
-    i = 0
-    while i < len(text):
-        print(text[i], end="")
-        # time is in seconds. This is pretty fast, feel free to adjust
-        time.sleep(0.01)
-        i += 1
-        sys.stdout.flush()
+from AndyThing import *
 
 harbt = """I had gotten some based quaaludes from my pog cousin and gave to two to everyone.
 Andrew didn't want any at first but eventually put them in their pocket. I had taken mine and fell asleep
@@ -66,24 +56,25 @@ Lani Stuff TM. I got hungry so I went downstairs and made myself a sandwich. As 
 popped in to talk to me before I went back upstairs. A bit later I noticed some commotion downstairs and went to see
 what was going on. And that's when I learned Rob was my new landlord."""
 
-fbnj = input("Who's testimony would you like to hear? ")
+print_out("Whose testimony would you like to hear? ")
+fbnj = input()
 def testimonies(sub):
     if sub == "Harb":
-        print(harbt)
+        print_out(harbt)
     elif sub == "Red":
-        print(redt)
+        print_out(redt)
     elif sub == "Shilpa":
-        print(shilpat)
+        print_out(shilpat)
     elif sub == "Blake":
-        print(blaket)
+        print_out(blaket)
     elif sub == "Sav":
-        print(savt)
+        print_out(savt)
     elif sub == "Raija":
-        print(raijat)
+        print_out(raijat)
     elif sub == "Lani":
-        print(lanit)
+        print_out(lanit)
     elif sub == "Rob":
-        print(robt)
+        print_out(robt)
     else:
         print("Try Again")
 testimonies(fbnj)

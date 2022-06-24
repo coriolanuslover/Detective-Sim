@@ -5,17 +5,7 @@
 # Design Outline - Plot Mystery Narrative, List Suspects, Design Inputs, Have Dialog print, Move back and forth between dialogs
 # TODO- Add plot and dialog, Add Input options for Details Testimony and Solve, Finish Testimonies
 
-import time, sys
-
-# Put this at the beginning of both files
-def print_out(text):
-    i = 0
-    while i < len(text):
-        print(text[i], end="")
-        # time is in seconds. This is pretty fast, feel free to adjust
-        time.sleep(0.01)
-        i += 1
-        sys.stdout.flush()
+from AndyThing import *
 
 suspects = ["Red", "Blake", "Harbin", "Rob", "Raija", "Sav", "Lani", "Shilpa"]
 
@@ -30,27 +20,33 @@ Regarding Wednesday's state, she was found a bloody mess dripping with gore and 
 Oddly enough, deep within her mouth, behind the gore, was also a sizable amount of peanut butter. 
 """
 
-print("On the night of Tuesday June 21st, Andrew P. MacFadyen was murdered.")
-print("Ten people roamed Simp City that night and one of them committed the most heinous of acts")
-print("Who killed Andy? As crack detective P.R. Ivateinvestigator, you've been tasked with solving this crime.")
-a = input("Enter Details to get started: ")
+print_out("On the night of Tuesday June 21st, Andrew P. MacFadyen was murdered.")
+print()
+print_out("Ten people roamed Simp City that night and one of them committed the most heinous of acts")
+print()
+print_out("Who killed Andy? As crack detective P.R. Ivateinvestigator, you've been tasked with solving this crime.")
+print()
+print_out("Enter Details to get started: ")
+a = input()
 
 def options(q):
     if q == "Details":
-        print(details)
+        print_out(details)
     else:
-        print("Wrong")
+        print_out("Wrong")
 options(a)
 
 def murderer(y):
     if y == "Lani":
-        print("The murder of Andrew MacFadyen has been solved. Never again shall the evil intellect of Lani Polanco be used to harm another")
-        print("Another case closed by P.R. Ivateinvestigator")
+        print_out("The murder of Andrew MacFadyen has been solved. Never again shall the evil intellect of Lani Polanco be used to harm another")
+        print()
+        print_out("Another case closed by P.R. Ivateinvestigator")
     elif y in innocentsuspects:
-        print("Another soul off to the dog house. I can't help shake the feeling that " + z + " has taken the fall for someone else. Either way, Case Closed")
+        print_out("Another soul off to the dog house. I can't help shake the feeling that " + z + " has taken the fall for someone else. Either way, Case Closed")
     elif y == "Options":
         options(a)
     else:
-        print(z + ", a cook at the diner downtown, has been apprehended and is awaiting trial. While they certainly didn't do it, they did however put onions on a burger of mine when I specificaly asked them not to, so fuck 'em. Case Closed.")
-z = input("Who is the murderer? ")
+        print_out(z + ", a cook at the diner downtown, has been apprehended and is awaiting trial. While they certainly didn't do it, they did however put onions on a burger of mine when I specificaly asked them not to, so fuck 'em. Case Closed.")
+print_out("Who is the murderer? ")
+z = input()
 murderer(z)
