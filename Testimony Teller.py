@@ -61,20 +61,49 @@ fbnj = input()
 def testimonies(sub):
     if sub == "Harb":
         print_out(harbt)
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
     elif sub == "Red":
         print_out(redt)
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
     elif sub == "Shilpa":
         print_out(shilpat)
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
     elif sub == "Blake":
         print_out(blaket)
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
     elif sub == "Sav":
         print_out(savt)
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
     elif sub == "Raija":
         print_out(raijat)
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
     elif sub == "Lani":
         print_out(lanit)
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
     elif sub == "Rob":
         print_out(robt)
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
+    elif sub == "Done":
+        print("DONE")
     else:
         print("Try Again")
+        print_out("\nWhose testimony would you like to hear? ")
+        fbjn = input()
+        testimonies(fbjn)
 testimonies(fbnj)
