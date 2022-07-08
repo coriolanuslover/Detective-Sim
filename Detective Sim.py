@@ -88,6 +88,9 @@ a = input()
 def options(q):
     if q == "Details":
         print_out(details)
+        print_out("\nEnter Details or Testimonies to Continue ")
+        a = input()
+        options(a)
     elif q == "Testimonies":
         print_out("Whose testimony would you like to hear? ")
         fbnj = input()
@@ -144,17 +147,23 @@ def options(q):
         print_out("Wrong")
 options(a)
 
+print_out("Who is the murderer? ")
+z = input()
+
 def murderer(y):
     if y == "Lani":
         print_out("The murder of Andrew MacFadyen has been solved. Never again shall the evil intellect of Lani Polanco be used to harm another")
-        print()
         print_out("Another case closed by P.R. Ivateinvestigator")
     elif y in innocentsuspects:
-        print_out("Another soul off to the dog house. I can't help shake the feeling that " + z + " has taken the fall for someone else. Either way, Case Closed")
+        print_out("Another soul off to the dog house. I can't help shake the feeling that " + y + " has taken the fall for someone else. Either way, Case Closed")
+        print_out("\nTry Again ")
+        z = input()
+        murderer(z)
     elif y == "Options":
         options(a)
     else:
-        print_out(z + ", a cook at the diner downtown, has been apprehended and is awaiting trial. While they certainly didn't do it, they did however put onions on a burger of mine when I specificaly asked them not to, so fuck 'em. Case Closed.")
-print_out("Who is the murderer? ")
-z = input()
+        print_out(y + ", a cook at the diner downtown, has been apprehended and is awaiting trial. While they certainly didn't do it, they did however put onions on a burger of mine when I specificaly asked them not to, so fuck 'em. Case Closed.")
+        print_out("\nTry Again ")
+        z = input()
+        murderer(z)
 murderer(z)
