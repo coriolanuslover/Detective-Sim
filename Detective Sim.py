@@ -3,7 +3,7 @@
 # Final and correct suspect will print good job string
 # If wrong, print bad job string
 # Design Outline - Plot Mystery Narrative, List Suspects, Design Inputs, Have Dialog print, Move back and forth between dialogs
-# TODO- Add plot and dialog, Add Input options for Details Testimony and Solve, Finish Testimonies
+# TODO- Add Break to Options Function
 
 from AndyThing import *
 
@@ -76,94 +76,89 @@ Lani Stuff TM. I got hungry so I went downstairs and made myself a sandwich. As 
 popped in to talk to me before I went back upstairs. A bit later I noticed some commotion downstairs and went to see
 what was going on. And that's when I learned Rob was my new landlord."""
 
-print_out("On the night of Tuesday June 21st, Andrew P. MacFadyen was murdered.")
+print("On the night of Tuesday June 21st, Andrew P. MacFadyen was murdered.")
 print()
-print_out("Ten people roamed Simp City that night and one of them committed the most heinous of acts")
+print("Ten people roamed Simp City that night and one of them committed the most heinous of acts")
 print()
-print_out("Who killed Andy? As crack detective P.R. Ivateinvestigator, you've been tasked with solving this crime.")
+print("Who killed Andy? As crack detective P.R. Ivateinvestigator, you've been tasked with solving this crime.")
 print()
-print_out("Enter Details or Testimonies to get started: ")
-a = input()
+print("Enter Details or Testimonies to get started: ")
 
-def options(q):
-    if q == "Details":
-        print_out(details)
-        print_out("\nEnter Details or Testimonies to Continue ")
-        a = input()
-        options(a)
-    elif q == "Testimonies":
-        print_out("Whose testimony would you like to hear? ")
-        fbnj = input()
-        def testimonies(sub):
-            if sub == "Harb":
-                print_out(harbt)
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-            elif sub == "Red":
-                print_out(redt)
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-            elif sub == "Shilpa":
-                print_out(shilpat)
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-            elif sub == "Blake":
-                print_out(blaket)
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-            elif sub == "Sav":
-                print_out(savt)
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-            elif sub == "Raija":
-                print_out(raijat)
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-            elif sub == "Lani":
-                print_out(lanit)
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-            elif sub == "Rob":
-                print_out(robt)
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-            elif sub == "Done":
-                print("DONE")
-            else:
-                print("Try Again")
-                print_out("\nWhose testimony would you like to hear? ")
-                fbjn = input()
-                testimonies(fbjn)
-        testimonies(fbnj)
-    else:
-        print_out("Wrong")
-options(a)
+def testimonies():
+    while True:
+        sub = input()
+        if sub == "Harb":
+            print(harbt)
+            print("\nWhose testimony would you like to hear? ")
+            continue
+        elif sub == "Red":
+            print(redt)
+            print("\nWhose testimony would you like to hear? ")
+            continue
+        elif sub == "Shilpa":
+            print(shilpat)
+            print("\nWhose testimony would you like to hear? ")
+            continue
+        elif sub == "Blake":
+            print(blaket)
+            print("\nWhose testimony would you like to hear? ")
+            continue
+        elif sub == "Sav":
+            print(savt)
+            print("\nWhose testimony would you like to hear? ")
+            continue
+        elif sub == "Raija":
+            print(raijat)
+            print("\nWhose testimony would you like to hear? ")
+            continue
+        elif sub == "Lani":
+            print(lanit)
+            print("\nWhose testimony would you like to hear? ")
+            continue
+        elif sub == "Rob":
+            print(robt)
+            print("\nWhose testimony would you like to hear? ")
+        elif sub == "Done":
+            print("Done")
+            break
+        else:
+            print("Try Again")
+            print("\nWhose testimony would you like to hear? ")
+            continue
 
-print_out("Who is the murderer? ")
-z = input()
+def options():
+    while True:
+        q = input()
+        if q == "Details":
+            print(details)
+            print("\nEnter Details or Testimonies to Continue ")
+            continue
+        elif q == "Testimonies":
+            print("Whose testimony would you like to hear? Enter 'Done' when finished ")
+            testimonies()
+            continue
+        elif q == "Done":
+            break
+        else:
+            print("Wrong")
+            continue
+options()
 
-def murderer(y):
-    if y == "Lani":
-        print_out("The murder of Andrew MacFadyen has been solved. Never again shall the evil intellect of Lani Polanco be used to harm another")
-        print_out("Another case closed by P.R. Ivateinvestigator")
-    elif y in innocentsuspects:
-        print_out("Another soul off to the dog house. I can't help shake the feeling that " + y + " has taken the fall for someone else. Either way, Case Closed")
-        print_out("\nTry Again ")
-        z = input()
-        murderer(z)
-    elif y == "Options":
-        options(a)
-    else:
-        print_out(y + ", a cook at the diner downtown, has been apprehended and is awaiting trial. While they certainly didn't do it, they did however put onions on a burger of mine when I specificaly asked them not to, so fuck 'em. Case Closed.")
-        print_out("\nTry Again ")
-        z = input()
-        murderer(z)
-murderer(z)
+print("Who is the murderer? ")
+
+def murderer():
+    while True:
+        y = input()
+        if y == "Lani":
+            print("The murder of Andrew MacFadyen has been solved. Never again shall the evil intellect of Lani Polanco be used to harm another")
+            print("Another case closed by P.R. Ivateinvestigator")
+            break
+        elif y in innocentsuspects:
+            print("Another soul off to the dog house. I can't help shake the feeling that " + y + " has taken the fall for someone else. Either way, Case Closed")
+            print("\nTry Again ")
+            continue
+        else:
+            print(y + ", a cook at the diner downtown, has been apprehended and is awaiting trial. While they certainly didn't do it, they did however put onions on a burger of mine when I specificaly asked them not to, so fuck 'em. Case Closed.")
+            print("\nTry Again ")
+            continue
+murderer()
